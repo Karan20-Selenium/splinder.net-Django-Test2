@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+
+ <link rel="stylesheet" href="{% static 'myapp\static\css\bootstrap-grid.min.css' %}">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>User Details</title>
+
+</head>
+<body>
+ <form action="" method="POST" novalidate> 
+ {% csrf_token %}
+  {{form.as_p}}
+  <input type="submit" value="Submit"><br><br>
+
+    <a class="btn btn-primary" href="{% userdetails2.html %}" role="button">Next</a>
+  
+ </form>
+
+ <script src="{% static 'myapp/js/jquery.js' %}"></script>
+ <script src="{% static 'myapp/js/popper.js' %}"></script>
+ <script src="{% static 'myapp/js/bootstrap.js' %}"></script>
+
+</body>
+</html>
